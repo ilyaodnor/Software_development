@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Data</title>
+</head>
+<body>
+
+    <label for="ageFilter">Leeftijd: </label>
+    <input type="number" id="ageFilter" min="0">
+    <button id="filterButton">Filter</button>
+
+    <div id="output"></div> 
+
+    <script>
+        let allData = [];
+
+        function loadData() {
+            fetch('opdracht2_bijlage.json')
+                .then(res => res.json())
+                .then(data => {
+                    allData = Array.isArray(data) ? data : [data];
+                    displayPeople(allData);
+                })
+                .catch(() => document.getElementById('output').textContent = "Upload error!");
+        }
+
+        function displayPeople(people) {
+            const output = document.getElementById('output');
+            output.innerHTML = people.map(person => 
+                Object.entries(person).map(([k, v]) => `${k}: ${v}`).join('<br>') + '<hr>—<hr>'
+            ).join('');
+        }
+
+        document.getElementById('filterButton').addEventListener('click', () => {
+            const ageValue = parseInt(document.getElementById('ageFilter').value, 10);
+            if (!isNaN(ageValue)) {
+                const filteredPeople = allData.filter(person => {
+                    return parseInt(person.leeftijd, 10) > ageValue;
+                });
+                displayPeople(filteredPeople);
+            }
+        });
+
+        loadData();
+    </script>
+
+</body>
+</html>
