@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        .container {
+            display: flex;
+            flex-direction: column;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1 id="optellen1"></h1>
+    <div class="container" id="container1"></div>
+    <h1 id="optellen2"></h1>
+    <div class="container" id="container2"></div>
+    <h1 id="optellen3"></h1>
+    <div class="container" id="container3"></div>
+    <h1 id="optellen4"></h1>
+    <div class="container" id="container4"></div>
+    
+    <script>
+        function optellen(getal, containerId, h1Id){
+            var h1 = document.getElementById(h1Id)
+            var container = document.getElementById(containerId)
+            h1.textContent = `tafel van ${getal}:`
+
+            for (var i = 0; i<10; i++){
+                var resultaat = document.createElement('p')
+                resultaat.textContent = `${i+1} * ${getal} = ${(i+1)*getal}`
+                container.appendChild(resultaat)
+            }
+        }
+
+
+        optellen(2, 'container1', 'optellen1')
+        optellen(4, 'container2', 'optellen2')
+        optellen(6, 'container3', 'optellen3')
+        optellen(8, 'container4', 'optellen4')
+    </script>
+</body>
+</html>

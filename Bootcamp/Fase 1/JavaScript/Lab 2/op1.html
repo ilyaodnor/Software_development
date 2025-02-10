@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dagen van de week</title>
+</head>
+<body>
+    <style>
+        p{
+            padding-left: 10%;
+            margin: 30px;
+        }
+    </style>
+    <h2>Alle dagen van de week zijn:</h2>
+    <p id="alle-dagen"></p>
+
+    <h2>De werkdagen zijn:</h2>
+    <p id="werkdagen"></p>
+
+    <h2>De weekenddagen zijn:</h2>
+    <p id="weekenddagen"></p>
+
+    <h2>Alle dagen van de week in omgekeerde volgorde zijn:</h2>
+    <p id="omgekeerd-alle-dagen"></p>
+
+    <h2>De werkdagen in omgekeerde volgorde zijn:</h2>
+    <p id="omgekeerd-werkdagen"></p>
+
+    <h2>De weekenddagen in omgekeerde volgorde zijn:</h2>
+    <p id="omgekeerd-weekenddagen"></p>
+
+    <script>
+        const dagen = ['maandag', 'dinsdag', 'woensdag', 'donderdag', 'vrijdag', 'zaterdag', 'zondag'];
+        document.getElementById('alle-dagen').textContent = dagen.join(', ');
+
+        const werkdagen = dagen.slice(0, 5);  
+        document.getElementById('werkdagen').textContent = werkdagen.join(', ');
+
+        const weekenddagen = dagen.slice(5);  
+        document.getElementById('weekenddagen').textContent = weekenddagen.join(', ');
+
+        const omgekeerdAlleDagen = [...dagen].reverse();
+        document.getElementById('omgekeerd-alle-dagen').textContent = omgekeerdAlleDagen.join(', ');
+
+        const omgekeerdWerkdagen = [...werkdagen].reverse();
+        document.getElementById('omgekeerd-werkdagen').textContent = omgekeerdWerkdagen.join(', ');
+
+        const omgekeerdWeekenddagen = [...weekenddagen].reverse();
+        document.getElementById('omgekeerd-weekenddagen').textContent = omgekeerdWeekenddagen.join(', ');
+    </script>
+
+</body>
+</html>

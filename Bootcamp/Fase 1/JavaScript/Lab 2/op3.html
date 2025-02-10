@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Operatoren</title>
+    <style>
+        .column {
+            display: flex;
+            flex-direction: column;
+            padding-left: 20%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Array operatoren</h1>
+    
+    <h2>Optellen van de twee arrays:</h2>
+    <div class="column" id="optellen"></div>
+    
+    <h2>Aftrekken van de twee arrays:</h2>
+    <div class="column" id="aftrekken"></div>
+    
+    <h2>Vermenigvuldigen van de twee arrays:</h2>
+    <div class="column" id="vermenigvuldigen"></div>
+    
+    <h2>Delen van de twee arrays:</h2>
+    <div class="column" id="delen"></div>
+
+    <script>
+        var arrayEen = [1,2,3,4,5,6,7,8,9,10];
+        var arrayTwee = [2,4,6,8,10,12,14,16,18,20];
+
+        function voegResultaatToe(id, operator, bewerking) {
+            var container = document.getElementById(id);
+            for (var i = 0; i < arrayEen.length; i++) {
+                var resultaat = document.createElement("p");
+                if(operator == '-' || operator == '/'){
+                    resultaat.textContent = `${arrayTwee[i]} ${operator} ${arrayEen[i]} = ${bewerking(arrayTwee[i], arrayEen[i])}`;
+                    container.appendChild(resultaat);
+                }else{
+                resultaat.textContent = `${arrayEen[i]} ${operator} ${arrayTwee[i]} = ${bewerking(arrayEen[i], arrayTwee[i])}`;
+                container.appendChild(resultaat);
+                }
+            }
+        }
+
+        voegResultaatToe("optellen", "+", (a, b) => a + b);
+        voegResultaatToe("aftrekken", "-", (a, b) => a - b);
+        voegResultaatToe("vermenigvuldigen", "*", (a, b) => a * b);
+        voegResultaatToe("delen", "/", (a, b) => a / b);
+    </script>
+</body>
+</html>

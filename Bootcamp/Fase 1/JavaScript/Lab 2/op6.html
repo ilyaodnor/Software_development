@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Piramide oplopend</h1>
+    <div id="con"></div>
+    <script>
+        while (true) {
+            var a = prompt('Voer in aantal namen: ');
+            var numNames = parseInt(a);
+
+            if (!isNaN(numNames) && numNames > 0) {
+                console.log(numNames);
+                break;
+            } else {
+                alert('Voer een geldig geheel getal in!');
+            }
+        }
+
+        var container = document.getElementById('con');
+
+        
+        for (var j = 1; j <= numNames; j++) {
+            var str = document.createElement('p');
+            let message = '';
+
+            for (var i = 1; i <= j; i++) {
+                message += String(i) + ' ';
+            }
+
+            str.textContent = message;
+            container.prepend(str);
+        }
+
+       
+        var header = document.createElement('h2');
+        var headerText = 'Array : ';
+
+        for (var i = 1; i < numNames+1; i++) {
+            headerText += i + ' ';
+        }
+
+        header.textContent = headerText;
+
+       
+        var h1Element = document.querySelector('h1');
+        if (h1Element) {
+            h1Element.after(header);
+        } else {
+            document.body.prepend(header); 
+        }
+</script>
+</body>
+</html>

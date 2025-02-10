@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>De ingevoerde namen in de array zijn:</h2>
+    <p id="namen", ></p>
+    <h2>De ingevoerde namen in de array in omgekeerde volgorde zijn:</h2>
+    <p id = "namen2"></p>
+
+    <script>
+        var namen = []
+        while (true) {
+            var aantal_namen = prompt('Voer in aantal namen: ');
+            var aantal_namen_int = parseInt(aantal_namen);
+
+            if (Number.isInteger(aantal_namen_int) && aantal_namen_int > 0 && aantal_namen_int <= 5) {
+                console.log(aantal_namen_int);
+                break;
+            } else {
+                alert('Voer in integer tussen 1 en 5!!');
+            }
+        }
+
+        for (var i = 0; i < aantal_namen_int; i++) {
+            var naam = prompt(`Voer in naam ${i + 1}: `);  
+            namen.push(naam);
+        }
+        document.getElementById("namen").textContent = namen.join(', ');
+        document.getElementById("namen2").textContent = namen.reverse().join(', ');
+    </script>
+</body>
+</html>
