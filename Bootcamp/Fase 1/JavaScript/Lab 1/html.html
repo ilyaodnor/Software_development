@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<script>
+    var cijferslist = [1, 2]
+    function fibonacci_calc(cijferslist){
+        let nieuwe_getal = cijferslist[cijferslist.length - 1] + cijferslist[cijferslist.length - 2];
+        cijferslist.push(nieuwe_getal);
+        return cijferslist
+    }
+    for (var i = 0; i<20; i++){
+         cijferslist = fibonacci_calc(cijferslist)
+    }
+    console.log(cijferslist)
+</script>
+</body>
+</html>
