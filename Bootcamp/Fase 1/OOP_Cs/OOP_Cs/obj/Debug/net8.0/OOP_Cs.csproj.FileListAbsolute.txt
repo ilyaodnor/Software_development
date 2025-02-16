@@ -1,0 +1,15 @@
+/Users/ilya/Documents/GitHub/Scooljaar2/Software_development/Bootcamp/Fase 1/OOP_Cs/OOP_Cs/bin/Debug/net8.0/OOP_Cs
+/Users/ilya/Documents/GitHub/Scooljaar2/Software_development/Bootcamp/Fase 1/OOP_Cs/OOP_Cs/bin/Debug/net8.0/OOP_Cs.deps.json
+/Users/ilya/Documents/GitHub/Scooljaar2/Software_development/Bootcamp/Fase 1/OOP_Cs/OOP_Cs/bin/Debug/net8.0/OOP_Cs.runtimeconfig.json
+/Users/ilya/Documents/GitHub/Scooljaar2/Software_development/Bootcamp/Fase 1/OOP_Cs/OOP_Cs/bin/Debug/net8.0/OOP_Cs.dll
+/Users/ilya/Documents/GitHub/Scooljaar2/Software_development/Bootcamp/Fase 1/OOP_Cs/OOP_Cs/bin/Debug/net8.0/OOP_Cs.pdb
+/Users/ilya/Documents/GitHub/Scooljaar2/Software_development/Bootcamp/Fase 1/OOP_Cs/OOP_Cs/obj/Debug/net8.0/OOP_Cs.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ilya/Documents/GitHub/Scooljaar2/Software_development/Bootcamp/Fase 1/OOP_Cs/OOP_Cs/obj/Debug/net8.0/OOP_Cs.AssemblyInfoInputs.cache
+/Users/ilya/Documents/GitHub/Scooljaar2/Software_development/Bootcamp/Fase 1/OOP_Cs/OOP_Cs/obj/Debug/net8.0/OOP_Cs.AssemblyInfo.cs
+/Users/ilya/Documents/GitHub/Scooljaar2/Software_development/Bootcamp/Fase 1/OOP_Cs/OOP_Cs/obj/Debug/net8.0/OOP_Cs.csproj.CoreCompileInputs.cache
+/Users/ilya/Documents/GitHub/Scooljaar2/Software_development/Bootcamp/Fase 1/OOP_Cs/OOP_Cs/obj/Debug/net8.0/OOP_Cs.sourcelink.json
+/Users/ilya/Documents/GitHub/Scooljaar2/Software_development/Bootcamp/Fase 1/OOP_Cs/OOP_Cs/obj/Debug/net8.0/OOP_Cs.dll
+/Users/ilya/Documents/GitHub/Scooljaar2/Software_development/Bootcamp/Fase 1/OOP_Cs/OOP_Cs/obj/Debug/net8.0/refint/OOP_Cs.dll
+/Users/ilya/Documents/GitHub/Scooljaar2/Software_development/Bootcamp/Fase 1/OOP_Cs/OOP_Cs/obj/Debug/net8.0/OOP_Cs.pdb
+/Users/ilya/Documents/GitHub/Scooljaar2/Software_development/Bootcamp/Fase 1/OOP_Cs/OOP_Cs/obj/Debug/net8.0/OOP_Cs.genruntimeconfig.cache
+/Users/ilya/Documents/GitHub/Scooljaar2/Software_development/Bootcamp/Fase 1/OOP_Cs/OOP_Cs/obj/Debug/net8.0/ref/OOP_Cs.dll
