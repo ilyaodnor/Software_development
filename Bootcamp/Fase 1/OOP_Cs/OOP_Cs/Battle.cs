@@ -6,21 +6,21 @@ namespace OOP_Cs
 {
     public class Trainer
     {
-        public string Naam { get; set; }
-        public Pokeballen Pokeballen { get; set; }
+        public string Naam { get; }
+        public Pokeballen Pokeballen { get; }
 
+     
         public Trainer(string trainerNaam)
         {
             Naam = trainerNaam;
             Pokeballen = new Pokeballen();
         }
-
         public void ToonPokemons()
         {
             Console.WriteLine($"{Naam} heeft de volgende pokemons:");
             foreach (var pokemon in Pokeballen.Pokebals)
             {
-                Console.WriteLine($"- {pokemon.Naam} (Type: {pokemon.Type})");
+                Console.WriteLine($"- {pokemon.Naam} (Type: {pokemon.CharectersType})");
             }
         }
     }
@@ -35,11 +35,11 @@ namespace OOP_Cs
         {
             TotaalBattles++; // Update score
             Battle battle = new Battle(trainer1, trainer2);
-            string winnaar = battle.StartBattle();
+            string? winnaar = battle.StartBattle();
             ToonScore(winnaar);
         }
 
-        public static void ToonScore(string winnaar)
+        public static void ToonScore(string? winnaar)
         {
             Console.WriteLine("\n----- SCOREBOARD -----");
             Console.WriteLine($"Aantal rondes gespeeld: {TotaalRondes}");
@@ -65,11 +65,11 @@ namespace OOP_Cs
             Trainer2 = trainer2;
         }
 
-       public string StartBattle()
+       public string? StartBattle()
         {
     Console.WriteLine($"De strijd tussen {Trainer1.Naam} en {Trainer2.Naam} begint!");
 
-    Pokemon vorigeWinnaar = null;
+    Pokemons vorigeWinnaar = null;
     while (Trainer1.Pokeballen.Pokebals.Count > 0 && Trainer2.Pokeballen.Pokebals.Count > 0)
     {
            
@@ -83,10 +83,10 @@ namespace OOP_Cs
             Console.Clear();
 
             int randomKey1 = new Random().Next(0, Trainer1.Pokeballen.Pokebals.Count);
-            Pokemon pokemon1 = Trainer1.Pokeballen.Pokebals[randomKey1];
+            Pokemons pokemon1 = Trainer1.Pokeballen.Pokebals[randomKey1];
 
             int randomKey2 = new Random().Next(0, Trainer2.Pokeballen.Pokebals.Count);
-            Pokemon pokemon2 = Trainer2.Pokeballen.Pokebals[randomKey2];
+            Pokemons pokemon2 = Trainer2.Pokeballen.Pokebals[randomKey2];
 
             Trainer1.Pokeballen.GooiPokeballen(pokemon1, Trainer1);
             Thread.Sleep(1000);
@@ -98,13 +98,13 @@ namespace OOP_Cs
             Arena.TotaalRondes++;
 
             // Battle logic
-            if (pokemon1.Strength == pokemon2.Type)
+            if (pokemon1.Strength == (Pokemons.Strengths)pokemon2.CharectersType)
             {
                 Console.WriteLine($"{pokemon1.Naam} verslaat {pokemon2.Naam}!");
                 Trainer2.Pokeballen.Pokebals.Remove(pokemon2);
                 vorigeWinnaar = pokemon1;
             }
-            else if (pokemon2.Strength == pokemon1.Type)
+            else if (pokemon2.Strength == (Pokemons.Strengths)pokemon1.CharectersType)
             {
                 Console.WriteLine($"{pokemon2.Naam} verslaat {pokemon1.Naam}!");
                 Trainer1.Pokeballen.Pokebals.Remove(pokemon1);
@@ -146,5 +146,3 @@ namespace OOP_Cs
             
         }
     }
-
-

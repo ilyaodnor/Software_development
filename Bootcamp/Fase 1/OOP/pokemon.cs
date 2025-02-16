@@ -1,6 +1,2 @@
-namespace DefaultNamespace;
 
-public class pokemon
-{
-    
-}
+console.writeLine("hallo world")
