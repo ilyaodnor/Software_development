@@ -1,0 +1,200 @@
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #d8d2d2;
+    margin: 0;
+    padding: 0;
+    background: #0d0d0d;
+}
+
+.navbar {
+    background: #1a1a1a;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    color: #ff6600;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 1000px;
+    background: #1e1e1e;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(255, 102, 0, 0.3);
+}
+
+.header-left {
+    width: 60%;
+    padding: 20px;
+}
+
+.header-right {
+    text-align: right;
+    width: 35%;
+    padding: 20px;
+}
+
+.screenshots {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    background: #151515;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+.screenshots img {
+    width: 30%;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.screenshots img:hover {
+    transform: scale(1.05);
+}
+
+.sys {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.2);
+    text-align: center;
+}
+
+.sys h2 {
+    color: #f0a500;
+}
+
+.sys-grid {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sys-grid div {
+    width: 46%;
+    background: #252525;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.reviews {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #1e1e1e;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(255, 102, 0, 0.2);
+    text-align: center;
+}
+
+.reviews-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.reviews-container div {
+    width: 42%;
+    background: #2c2c2c;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.reviews h3 {
+    color: #f0a500;
+}
+
+.negative h3 {
+    color: #ff4444;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.screenshots, .header, .reviews,.sys{
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+}
+
+/* Стилизация инпута */
+.dropdown {
+    position: relative;
+    width: 200px;
+    padding-top: 10px;
+    margin-left: 0;
+}
+
+.dropdown input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.option {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.option:hover {
+    background: #f0f0f0;
+}
