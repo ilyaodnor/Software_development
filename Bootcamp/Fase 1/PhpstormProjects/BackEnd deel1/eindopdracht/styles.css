@@ -1,0 +1,41 @@
+body {
+    background-image: url('images/morning.png'); /* Замените на путь к вашей картинке */
+    background-size: cover; /* Растянуть изображение, сохраняя пропорции */
+    background-repeat: no-repeat; /* Избегаем повторения картинки */
+    background-position: center center; /* Центрируем изображение */
+    margin: 0; /* Убираем лишние отступы */
+    height: 100vh; /* Высота всего экрана */
+}
+
+.image-container {
+    position: relative; /* Относительное позиционирование для работы с текстом поверх */
+    text-align: center; /* Центрирование текста по горизонтали */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем текст относительно изображения */
+    justify-content: center; /* Центрируем по вертикали */
+    height: 500px; /* Устанавливаем желаемую высоту контейнера */
+}
+
+.image-container img {
+    display: block;
+    width: 100%;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.image-container h1,
+.image-container h2 {
+    position: absolute; /* Абсолютное позиционирование для центрирования внутри контейнера */
+    top: 70%; /* Смещение на середину контейнера */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Центрируем точно по центру */
+    color: white; /* Белый текст */
+    z-index: 2; /* Текст выше картинки */
+    margin: 0; /* Убираем отступы */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Тень для читаемости текста */
+}
+.image-container h1 {
+    top: 60%;
+}
