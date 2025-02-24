@@ -4,7 +4,6 @@ let selectedGenre = "All";
 let selectedGames = [];
 let buyButton = document.getElementById("buyButton");
 
-// Загрузка данных из файла JSON
 function loadData() {
     fetch('games.json')
         .then(res => res.json())
@@ -16,6 +15,7 @@ function loadData() {
             document.getElementById('output').textContent = "Ошибка загрузки!";
         });
 }
+
 function displayGames(games) {
     container.innerHTML = '';
 
@@ -87,14 +87,13 @@ document.getElementById('filterButton').addEventListener('click', () => {
     displayGames(games);  // обновить отображение
 });
 
-// Обработчик кнопки покупки
 buyButton.addEventListener("click", function() {
     let str = 'Your Order:\n\n';
     let total = 0;
 
     for (let i in selectedGames) {
         let game = selectedGames[i];
-        str += `${game.title.padEnd(30)} - $${game.price.toFixed(2)}\n`; // Оформление: игра с ценой
+        str += `${game.title.padEnd(30)} - $${game.price.toFixed(2)}\n`;
         total += game.price;
     }
     str += `\n${'='.repeat(40)}\n`;
